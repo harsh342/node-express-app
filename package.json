@@ -8,12 +8,24 @@
     "debug": "^4.1.0",
     "express": "^4.16.4",
     "morgan": "^1.9.1",
+    "nodemon": "^1.18.6",
     "update": "^0.7.4"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
   },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "DEBUG=app nodemon app.js",
+    "lint": "eslint app.js"
+  },
+  "nodemonConfig":{
+      "restartable":"rs",
+      "ignore":["/node_modules/**/node_modules"],
+      "delay":"2500"
+  } ,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/harsh342/node-express-app.git"

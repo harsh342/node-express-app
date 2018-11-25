@@ -2,7 +2,7 @@
 node_modules/
 
 package-lock.json
-
+*.log
 # Build and Release Folders
 bin-debug/
 bin-release/
